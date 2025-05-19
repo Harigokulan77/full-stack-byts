@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./stylee.css">
+</head>
+<body id="index">
+    <header>
+        <img src="images/imge.jpg" alt="logo">
+        <p id="hp">Enter Two Digits to Add Two Numbers!</p>
+    </header>
+
+    <center><h2 id="sname">ADD NUMBERS</h2></center>
+    <center>
+        <form id="sform">
+            <label for="num1">Num 1</label>
+            <input type="number" name="num1" id="num1">
+            <br><br>
+
+            <label for="num2">Num 2</label>
+            <input type="number" name="num2" id="num2">
+            <background-color:blue></background-color:blue>
+            <br><br>
+
+            <input type="button" value="Calculate" onclick="add()">
+            <br><br>
+
+            <label for="result">Result</label>
+            <input type="text" id="result" readonly>
+        </form>
+    </center>
+
+    <script>
+        function add() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+
+        
+            if (a === "" || b === "") {
+                alert("Please enter both numbers.");
+                return;
+            }
+
+            let res = parseFloat(a) + parseFloat(b);
+            document.getElementById("result").value = res;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+     <link rel="stylesheet" href="./stylee.css">
+</head>
+<body id="index">
+<header>
+    <img src="images/imge.jpg" alt="logo">
+    <p id="hp">Quick Calculations, Temperature Conversions & Time Tracking All in One Place!</p>
+</header>
+<center>
+<form id="cel-span">
+    <label for="Celcius">Enter a celcius value</label>
+    <input type="number" name="Celcius" id="cel" oninput="scr()">
+    <h3 id="res">Farenheit : </h3>
+</form>
+</center>
+    <script>
+        function scr(){
+             let a  = document.getElementById("cel").value;
+             faren = (parseFloat(a)*9/5)+32;
+             document.getElementById("res").innerText=`Farenheit : ${faren}`;
+        }
+    </script>
+</body>
+</html>

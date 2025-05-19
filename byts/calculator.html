@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+     <link rel="stylesheet" href="./stylee.css">
+</head>
+<body id="index">
+<header>
+    <img src="images/imge.jpg" alt="logo">
+    <p id="hp">Quick Calculations, Temperature Conversions & Time Tracking All in One Place!</p>
+</header>
+<center><h1 id="calh1">CALCULATOR</h1></center>
+
+  <section id="scal">
+    <br/> <br/> <br/>
+
+<center><h2 id="caldisplay"></h2></center>  
+    <span id="span-cal">
+    <center>
+    <button type="button" onclick="makeexp(1)">1</button>
+    <button type="button" onclick="makeexp(2)">2</button>
+    <button type="button" onclick="makeexp(3)">3</button><br/>
+    <button type="button" onclick="makeexp(4)">4</button>
+    <button type="button" onclick="makeexp(5)">5</button>
+    <button type="button" onclick="makeexp(6)">6</button><br/>
+    <button type="button" onclick="makeexp(7)">7</button>
+    <button type="button" onclick="makeexp(8)">8</button>
+    <button type="button" onclick="makeexp(9)">9</button><br/>
+    <button type="button" onclick="makeexp(0)">0</button>
+    <button type="button" onclick="makeexp('+')">+</button>
+    <button type="button" onclick="makeexp('-')">-</button><br/>
+    <button type="button" onclick="makeexp('*')">*</button>
+    <button type="button" onclick="makeexp('/')">/</button>
+    <button type="button" onclick="calculate()">=</button>
+    <button type="button" onclick="reset()">reset</button>
+    </center>
+
+    <br/> <br/> <br/>
+
+  <center> <h3 id="calresult">CALCULATED VALUE IS : </h3> </center> </span>
+  </section id="calsec">
+    
+
+    <script>
+      let expr = ""
+      function makeexp(val){
+        expr +=val;
+        document.getElementById("caldisplay").innerText=expr;
+       }
+       function calculate(){
+        let res=eval(expr);
+        document.getElementById("calresult").innerText=`CALCULATED VALUE IS : ${res}`;
+       }
+       function reset(){
+        expr="";
+        document.getElementById("caldisplay").innerText = "";
+        document.getElementById("calresult").innerText= "CALCULATED VALUE IS : ";
+       }
+
+    </script>
+</body>
+</html>
